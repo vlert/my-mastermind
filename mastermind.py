@@ -73,7 +73,12 @@ class Mastermind:
         """
         Print the final game state after the game ends.
         """
-        print("Game Over.")
+        print("End game.")
         print(f"Solution: {self.solution}")
         print(f"Guesses: {self.guesses}")
 
+if __name__ == "__main__":
+    game = Mastermind(colors=6, positions=4)
+    game.setup_game()
+    game.play_game()
+    game.dump_game_state()
