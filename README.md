@@ -1,9 +1,9 @@
 # my-mastermind
-Overview
+#Overview
 
 This repository contains the classic board game called "Mastermind". The game is designed to allows players to guess a secret color combination set by the program.
 
-Features
+#Features
 
 Input Validation: The game checks for valid inputs and provides feedback.
 
@@ -11,7 +11,7 @@ Hint System: After each guess, players receive hints indicating correct and misp
 
 Replayability: The solution is randomly generated at the beginning of each game, offering a unique challenge every time.
 
-How to Play
+#How to Play
 
 Start the Game
 
@@ -25,6 +25,6 @@ o : A color is correct but in the wrong position.
 
 Winning the Game: The game is won when you guess the correct color sequence.
 
-Customization
+#Customization
 
 To change the game difficulty, edit the colors and positions parameters in mastermind.py
