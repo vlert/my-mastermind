@@ -45,3 +45,35 @@ class Mastermind:
                 temp_solution[temp_solution.index(guess[i])] = None  # Mark this color as matched
 
         return ''.join(hint)
+
+    def play_game(self):
+        """
+        Main method to start the game loop.
+        """
+        print("Welcome to Mastermind!")
+        print(f"Try to guess the sequence of {self.positions} colors (1-{self.colors}).")
+
+        while True:
+            user_input = input("Enter your guess: ")
+            if not self._validate_input(user_input):
+                print("Invalid input. Please enter a valid guess.")
+                continue
+
+            guess = [int(c) for c in user_input]
+            self.guesses.append(guess)
+
+            hint = self._get_hint(guess)
+            print(f"Hint: {hint}")
+
+            if guess == self.solution:
+                print("Congratulations! You've solved the puzzle.")
+                break
+
+    def dump_game_state(self):
+        """
+        Print the final game state after the game ends.
+        """
+        print("Game Over.")
+        print(f"Solution: {self.solution}")
+        print(f"Guesses: {self.guesses}")
+
